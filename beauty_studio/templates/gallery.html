@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="gallery">
+        {% for image in gallery %}
+            <a href="#"><img class="gallery_image" src="{{ image.image.url }}" alt=""></a>
+        {% endfor %}
+    </div>
+
+    <div class="callBackFormOverlay" id="overlayCallBackForm"></div>
+    <div class="messageFormContainer" id="callBackForm">
+        <div class="messageFormContainer_titleLevel">
+            <p class="messageFormContainer_titleLevel__title">Отправка сообщения</p>
+            <img src="{% static 'images/homeImages/cross.svg' %}" alt="" id="closeCallBackForm">
+        </div>
+        <form method="POST" action="" class="messageFormContainer_messageForm">
+            {% csrf_token %}
+            {{ formCallBack.as_p }}
+            <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
+        </form>
+    </div>
+
+
+    <script src="{% static 'scripts/navbar.js' %}"></script>
+    <script src="{% static 'scripts/callBackForm.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        // Применяем маску ввода к полю номера телефона
+        $('#id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+    });
+    </script>
+{% endblock %}

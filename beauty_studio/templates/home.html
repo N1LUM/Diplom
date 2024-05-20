@@ -1,0 +1,181 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="slider">
+        <div class="slider_purchaseWords">
+            <p class="slider_purchaseWords__text">Стиль, который говорит за вас.</p>
+            <div class="slider_purchaseWords__buttons">
+                <a href="/services"><button class="purchaseWords_buttons__button">Прайс-лист</button></a>
+                <a href="/gallery"><button class="purchaseWords_buttons__button">Галерея</button></a>
+            </div>
+        </div>
+
+        <div class="slider_overlay" id="overlay"></div>
+    </div>
+
+    <div class="studioBlock">
+        <div class="studioBlock_director">
+            <img src="{% static 'images/homeImages/director.jpg' %}" alt="" class="studioBlock_director__img">
+            <div class="studioBlock_director__information">
+                <p class="director_information__title">Я Ольга Лазуренко</p>
+                <p class="director_information__text">Директор студии. Стилист, стилист-колорист с 20-летнем стажем. В моих руках, ваши волосы расцветут у вас на глазах! А в моей студии вы получите незабываемое обслуживание и приятные воспоминание после. Также в нашей студии есть обучение этим прекрасным искусством!</p>
+            </div>
+        </div>
+        <div class="studioBlock_photos">
+            <img src="{%  static 'images/homeImages/studioImg1.png' %}" alt="" class="studioBlock_photos__photo">
+            <img src="{%  static 'images/homeImages/studioImg2.png' %}" alt="" class="studioBlock_photos__photo">
+            <img src="{%  static 'images/homeImages/studioImg3.png' %}" alt="" class="studioBlock_photos__photo">
+            <img src="{%  static 'images/homeImages/studioImg4.png' %}" alt="" class="studioBlock_photos__photo">
+        </div>
+    </div>
+
+    <div class="serviceBlock">
+        <p class="serviceBlock_title">Ознакомся с услугами</p>
+        <div class="serviceBlock_cards">
+            <a href="/services">
+                <div class="serviceBlock_cards__card">
+                    <img src="{%  static 'images/homeImages/serviceImg1.png' %}" alt="" class="cards_card__img">
+                    <p class="cards_card__title">Окрашивание</p>
+                </div>
+            </a>
+            <a href="/services">
+                <div class="serviceBlock_cards__card">
+                    <img src="{%  static 'images/homeImages/serviceImg2.png' %}" alt="" class="cards_card__img">
+                    <p class="cards_card__title">Стрижка</p>
+                </div>
+            </a>
+            <a href="/services">
+                <div class="serviceBlock_cards__card">
+                    <img src="{%  static 'images/homeImages/serviceImg3.png' %}" alt="" class="cards_card__img">
+                    <p class="cards_card__title">Укладка</p>
+                </div>
+            </a>
+            <a href="/services">
+                <div class="serviceBlock_cards__card">
+                    <img src="{%  static 'images/homeImages/serviceImg4.png' %}" alt="" class="cards_card__img">
+                    <p class="cards_card__title">Уходовые процедуры</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="galleryBlock">
+    <p class="galleryBlock_title">Посмотри работы</p>
+    <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/gallery"><img src="{% static 'images/homeImages/slide1.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide2.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide3.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide4.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide5.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide6.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide7.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide8.png' %}" /></a>
+                </div>
+                <div class="swiper-slide">
+                     <a href="/gallery"><img src="{% static 'images/homeImages/slide9.png' %}" /></a>
+                </div>
+            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="offerBlock">
+        <div class="offerBlock_offerText">
+            <p class="offerBlock_offerText__title">Понравились услуги?</p>
+            <div class="offerBlock_offerText__buttons">
+                <a href="/services"><button class="offerText_buttons__button">Прайс-лист</button></a>
+                <a href="/order"><button class="offerText_buttons__button">Запись</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="callBackFormOverlay" id="overlayCallBackForm"></div>
+    <div class="messageFormContainer" id="callBackForm">
+        <div class="messageFormContainer_titleLevel">
+            <p class="messageFormContainer_titleLevel__title">Отправка сообщения</p>
+            <img src="{% static 'images/homeImages/cross.svg' %}" alt="" id="closeCallBackForm">
+        </div>
+        <form method="POST" action="" class="messageFormContainer_messageForm">
+            {% csrf_token %}
+            {{ formCallBack.as_p }}
+            <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
+        </form>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2400,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+        });
+    </script>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const sidebar = document.getElementById('sidebar');
+        const openSidebarButton = document.getElementById('open-sidebar');
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        openSidebarButton.addEventListener('click', (e) => {
+            overlay.style.width = 'calc(100vw - 320px)';
+            sidebar.style.right = '0%';
+        });
+
+        closeSidebarButton.addEventListener('click', (e) => {
+            sidebar.style.right = '-320px';
+            overlay.style.width = '100%';
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        // Применяем маску ввода к полю номера телефона
+        $('#id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+    });
+    </script>
+
+    <script src="{% static 'scripts/callBackForm.js' %}"></script>
+
+{% endblock %}

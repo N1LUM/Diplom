@@ -1,0 +1,102 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="servicesBlock">
+        {% for type in types %}
+            <div class="servicesBlock_cardOfServices">
+                <p class="servicesBlock_titleOfService">{{type.title}}</p>
+                <div class="servicesBlock_cardOfServices__services">
+                {% for service in services %}
+                    {% if service.type.title == type.title %}
+                        <div class="cardOfServices_services__service" data-service='{
+                            "video": "{{ service.videos.video }}",
+                            "hours": "{{ service.hours }}",
+                            "minute": "{{ service.minute }}",
+                            "cost": "{{ service.cost }}",
+                            "title": "{{ service.title }}",
+                            "description": "{{ service.description }}",
+                            "images": [
+                                {% for img in service.images.all %}
+                                    {
+                                        "url": "{{ img.image.url }}",
+                                        "id": "{{ img.id }}"
+                                    }
+                                    {% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            ]
+                        }'>
+                            <p class="services_service__title">{{ service.title }}</p>
+                            <div class="services_service__price">
+                                <div class="service_price__time">
+                                    <p class="price_time__hours">{{ service.hours }}ч</p>
+                                    <p class="price_time__minutes">{{ service.minute }}мин</p>
+                                </div>
+                                <p class="service_price__cost">{{ service.cost }}руб</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="overlayOfServiceCard" id="overlayService"></div>
+    <div class="cardOfService" id="carOfService">
+        {% for service in services%}
+            {% if service.title == "Балаяж" %}
+                <p class="cardOfService_title" id="serviceTitle">{{ service.title }}</p>
+                <div class="cardOfService_mainBlock">
+                    <div class="cardOfService_content">
+                        <video class="cardOfService_content__video" controls id="serviceVideo">
+                          <source src="{{ service.videos.video }}" type="video/mp4" id="serviceVideoSource">
+                        </video>
+                        <div class="cardOfService_content__images">
+
+                        </div>
+                    </div>
+                    <div class="cardOfService_description">
+                        <p class="cardOfService_description__text" id="serviceDescription">{{ service.description }}</p>
+                        <div class="cardOfService_description__underDescription">
+                            <div class="description_underDescription__details">
+                                <p class="underDescription_details__time" id="serviceHours">{{ service.hours }}ч</p>
+                                <p class="underDescription_details__time" id="serviceMinutes">{{ service.minute }}мин</p>
+                                <p class="underDescription_details__cost" id="serviceCost">{{ service.cost }}руб</p>
+                            </div>
+                            <button class="description_underDescription__closeButton" id="closeButton">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="callBackFormOverlay" id="overlayCallBackForm"></div>
+    <div class="messageFormContainer" id="callBackForm">
+        <div class="messageFormContainer_titleLevel">
+            <p class="messageFormContainer_titleLevel__title">Отправка сообщения</p>
+            <img src="{% static 'images/homeImages/cross.svg' %}" alt="" id="closeCallBackForm">
+        </div>
+        <form method="POST" action="" class="messageFormContainer_messageForm">
+            {% csrf_token %}
+            {{ formCallBack.as_p }}
+            <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
+        </form>
+    </div>
+
+
+    <script src="{% static 'scripts/navbar.js' %}"></script>
+    <script src="{% static 'scripts/service.js' %}"></script>
+    <script src="{% static 'scripts/callBackForm.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        // Применяем маску ввода к полю номера телефона
+        $('#id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+    });
+    </script>
+{% endblock %}

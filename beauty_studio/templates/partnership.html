@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="partnership">
+        <div class="partnership_info">
+            <p class="partnership_title">Работа</p>
+            <div class="partnership_block">
+                <div class="partnership_block__column">
+                    <p class="block_column__title">Условия</p>
+                    <ul class="block_column__list">
+                        <li class="column_list__item">1. Стильный и просторный салон</li>
+                        <li class="column_list__item">2. Дружелюбный директор и коллектив</li>
+                        <li class="column_list__item">3. Холодильник, микроволновка, кофемашина</li>
+                        <li class="column_list__item">4. Визуально привлекательное, удобное рабочее место</li>
+                    </ul>
+                </div>
+                <div class="partnership_block__column">
+                    <p class="block_column__title">Требования</p>
+                    <ul class="block_column__list">
+                        <li class="column_list__item">1. Уметь делать стрижки от каре до пикси</li>
+                        <li class="column_list__item">2. Окрашивание в разных тонах и техниках</li>
+                        <li class="column_list__item">3. Желание заработать больше, делая лучше</li>
+                        <li class="column_list__item">4. Быть адекватным и социально-адаптивным человеком, вежливость</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="partnership_separateLine"></div>
+            <p class="partnership_title">Сотдрудничество</p>
+            <div class="partnership_block">
+                <div class="partnership_block__column">
+                    <p class="block_column__title">Условия</p>
+                    <ul class="block_column__list">
+                        <li class="column_list__item">1. Стильный и просторный салон</li>
+                        <li class="column_list__item">2. Дружелюбный директор и коллектив</li>
+                        <li class="column_list__item">3. Холодильник, микроволновка, кофемашина</li>
+                        <li class="column_list__item">4. Визуально привлекательное, удобное рабочее место</li>
+                    </ul>
+                </div>
+                <div class="partnership_block__column">
+                    <p class="block_column__title">Требования</p>
+                    <ul class="block_column__list">
+                        <li class="column_list__item">1. Уметь делать стрижки от каре до пикси</li>
+                        <li class="column_list__item">2. Окрашивание в разных тонах и техниках</li>
+                        <li class="column_list__item">3. Желание заработать больше, делая лучше</li>
+                        <li class="column_list__item">4. Быть адекватным и социально-адаптивным человеком, вежливость</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="partnership_offerBlock">
+            <p class="partnership_offerBlock__offerText">Заинтересовало предложение?</p>
+            <button class="partnership_offerBlock__offerButton">Связаться</button>
+        </div>
+    </div>
+
+    <div class="callBackFormOverlay" id="overlayCallBackForm"></div>
+    <div class="messageFormContainer" id="callBackForm">
+        <div class="messageFormContainer_titleLevel">
+            <p class="messageFormContainer_titleLevel__title">Отправка сообщения</p>
+            <img src="{% static 'images/homeImages/cross.svg' %}" alt="" id="closeCallBackForm">
+        </div>
+        <form method="POST" action="" class="messageFormContainer_messageForm">
+            {% csrf_token %}
+            {{ formCallBack.as_p }}
+            <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
+        </form>
+    </div>
+
+
+    <script src="{% static 'scripts/navbar.js' %}"></script>
+    <script src="{% static 'scripts/callBackForm.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        // Применяем маску ввода к полю номера телефона
+        $('#id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+    });
+    </script>
+{% endblock %}

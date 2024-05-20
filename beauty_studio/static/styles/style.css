@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Gabriela&family=Hachi+Maru+Pop&family=Handjet:wght@100..900&family=Hina+Mincho&display=swap');
+@font-face {
+    font-family: 'Dance parthner'; /* Название вашего шрифта */
+    src: url('/static/fonts/dance_partner.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+    /* Если вы хотите использовать разные форматы шрифта, добавьте их здесь */
+}
+@font-face {
+    font-family: 'DEUX'; /* Название вашего шрифта */
+    src: url('/static/fonts/DEUX.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+    /* Если вы хотите использовать разные форматы шрифта, добавьте их здесь */
+}
+
+@font-face {
+    font-family: 'Perun'; /* Название вашего шрифта */
+    src: url('/static/fonts/Perun.ttf') format('truetype'); /* Путь к вашему файлу шрифта */
+    /* Если вы хотите использовать разные форматы шрифта, добавьте их здесь */
+}
+
+body{
+    background: #151313;
+    padding: 0;
+    margin: 0;
+    font-family: "Perun", serif;
+    -webkit-user-select: none; /* Для WebKit-браузеров (Chrome, Safari) */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none; /* Для Internet Explorer */
+    user-select: none;
+}
+button{
+    font-family: "Perun", serif;
+}

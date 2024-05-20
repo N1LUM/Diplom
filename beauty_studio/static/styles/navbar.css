@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar{
+    background: #151313;
+    padding: 10px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 3;
+    position: sticky;
+}
+.navbar a {
+    text-decoration: none;
+}
+.navbar_logotype{
+    display: flex;
+}
+.navbar_logotype__name{
+    color: white;
+    margin-left: 15px;
+    font-family: "Dance parthner", serif;
+}
+.navbar_burgerMenu{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar{
+    font-family: "Perun", serif;
+    width: 320px;
+    height: 100vh;
+    background: #151313;
+    position: fixed;
+    right: -320px;
+    top: 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    transition: 0.8s ease;
+    z-index: 3;
+    border-left: 5px solid white;
+    border-image: linear-gradient(to bottom, white 60%, #151313, #151313) 1;
+}
+.sidebar_links{
+    margin: 40px 0 20px 0;
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid white;
+}
+.sidebar_links li{
+    margin: 0 0 10px 0;
+    text-align: center;
+    padding: 5px;
+}
+.sidebar_links__link{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.sidebar_links__link:hover{
+    color: #151313;
+    background: white;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+.sidebar_button{
+    background: #151313;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.sidebar_button:hover{
+    background: white;
+    color: #151313;
+    cursor: pointer;
+}
+.sidebar_contacts{
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar_contacts li{
+    margin: 0 0 10px 0;
+    text-align: center;
+    padding: 5px;
+}
+.sidebar_contacts__contact{
+    color: white;
+    transition: 0.2s;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_contacts__contact:hover{
+    color: #151313;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidebar_cross{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+    .navbar{
+        padding: 10px 30px;
+    }
+    .navbar_logotype__name{
+        font-size: 18px;
+    }
+}

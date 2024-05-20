@@ -1,0 +1,292 @@
+.order{
+    padding: 50px 200px;
+    display: flex;
+    gap: 30px;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    border-image: linear-gradient(to right, #664F2C, #CDAC7B) 1
+}
+.order_listOfServices{
+    background: white;
+    border: 3px solid #664F2C;
+    border-radius: 5px;
+    padding: 20px 20px;
+    width: 100%;
+    height: 680px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    box-sizing: border-box;
+}
+.order_listOfServices__service{
+    background: #151313;
+    width: 300px;
+    height: 80px;
+    box-shadow: 5px 5px 5px rgba(21,19,19, 0.3);
+    border: 1px solid #151313;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.order_listOfServices__service:hover{
+    background: white;
+    color: #151313;
+}
+.listOfServices_service__title{
+   margin: 0;
+}
+.listOfServices_service__info{
+    display: flex;
+    justify-content: space-between;
+}
+.service_info__time{
+    display: flex;
+    gap: 5px;
+}
+.order_cart__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    color: white;
+}
+.order_cart__form p{
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.order_cart__form p input{
+    align-self: center;
+}
+.order_cart__form label{
+    color: white;
+}
+.order_cart__form input{
+    width: 320px;
+    font-size: 19px;
+}
+.order_form__submit{
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #151313;
+    color: white;
+    width: 250px;
+    font-size: 20px;
+    padding: 5px 30px;
+    box-shadow: 5px 5px 5px rgba(196, 191, 191, 0.5);
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+.order_form__submit:hover{
+    color: #151313;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #151313;
+    box-shadow: 10px 10px 10px rgba(21, 19, 19, 0.5);
+}
+.order_cart__items{
+    height: 350px;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow-y: auto;
+    background: white;
+    scrollbar-width: thin;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.cart_items__service{
+    background: #151313;
+    width: 300px;
+    height: 80px;
+    box-shadow: 5px 5px 5px rgba(21,19,19, 0.3);
+    border: 1px solid #151313;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+.order_cart__form .order_form__text{
+    color: white;
+    margin: 15px 0 5px 0;
+}
+.order_cart__form .order_form__text a{
+    color: #CDAC7B;
+    text-decoration: none;
+}
+.items_service__nameAndCross{
+    display: flex;
+    justify-content: space-between;
+}
+.service_nameAndCross__img:hover{
+    cursor: pointer;
+}
+.service_nameAndCross__title{
+    margin: 0;
+}
+.items_service__info{
+    display: flex;
+    justify-content: space-between;
+}
+.order_cart__resultCost{
+    display: flex;
+    gap: 15px;
+    color: white;
+    margin-left: 5px;
+}
+.cart_resultCost__cost{
+    margin: 5px 0 0 0;
+}
+.cart_resultCost__time{
+    margin: 5px 0 0 0;
+}
+@media screen and (max-width: 1100px) {
+    .order{
+        padding: 20px 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .order{
+        flex-direction: column;
+    }
+    .order_listOfServices{
+        height: 500px;
+    }
+    .order_cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .order_cart__items{
+        width: 320px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .order{
+        padding: 10px 10px;
+    }
+    .order_listOfServices{
+        padding: 5px 5px;
+    }
+    .order_cart__form{
+    }
+    .order_cart__form input{
+        width: 280px;
+    }
+    .order_cart__form p{
+        display: flex;
+        flex-direction: column;
+    }
+    .order_cart__form .order_form__text{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .order_cart__form .order_form__text{
+        font-size: 16px;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+.messageFormContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #151313;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 0 20px 20px 20px;
+    z-index: 999;
+    width: 270px;
+}
+.messageFormContainer_titleLevel{
+    width: 100%;
+}
+.messageFormContainer_titleLevel img{
+    width: 15px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+}
+.messageFormContainer_titleLevel__title{
+    color: white;
+    text-align: center;
+}
+.messageFormContainer_messageForm{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.messageFormContainer_messageForm p{
+    color: white;
+    margin: 0 0 15px 0;
+}
+.messageFormContainer_messageForm input{
+    width: 250px;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+.messageFormContainer_messageForm{
+    color: white;
+}
+.messageFormContainer_messageForm textarea{
+    width: 250px;
+    box-sizing: border-box;
+    margin: 0;
+    resize: none;
+    font-size: 16px;
+}
+.messageFormContainer_messageForm__submitButton{
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #151313;
+    color: white;
+    font-size: 16px;
+    padding: 5px 30px;
+    box-shadow: 5px 5px 5px rgba(196, 191, 191, 0.5);
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+.messageFormContainer_messageForm__submitButton:hover{
+    color: #151313;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #151313;
+    box-shadow: 10px 10px 10px rgba(21, 19, 19, 0.5);
+}
+.callBackFormOverlay{
+    width: 100vw;
+    height: 100vh;
+    background: #151313;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+

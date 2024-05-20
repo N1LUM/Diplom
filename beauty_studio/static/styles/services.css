@@ -1,0 +1,377 @@
+.servicesBlock{
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    border-image: linear-gradient(to right, #664F2C, #CDAC7B) 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 200px;
+}
+.servicesBlock_cardOfServices{
+    background: white;
+    width: 630px;
+    padding: 20px 40px;
+    margin: 0 0 10px 10px;
+    border-radius: 5px;
+}
+.servicesBlock_cardOfServices__services{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.cardOfServices_services__service{
+    background: #151313;
+    width: 300px;
+    height: 100%;
+    box-shadow: 5px 5px 5px rgba(21,19,19, 0.3);
+    border: 1px solid #151313;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.cardOfServices_services__service:nth-child(even) {
+    margin-left: 20px;
+}
+.cardOfServices_services__service:hover{
+    background: white;
+    color: #151313;
+}
+.servicesBlock_titleOfService{
+    font-size: 20px;
+}
+.services_service__title{
+    margin: 0;
+}
+.services_service__price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.service_price__time{
+    display: flex;
+}
+.price_time__hours{
+    margin: 0;
+}
+.price_time__minutes{
+    margin: 0 0 0 5px;
+}
+.service_price__cost{
+    margin: 0;
+}
+
+.cardOfService{
+    position: fixed;
+    background: #151313;
+    transition: 1s ease;
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border: 1px solid white;
+}
+.overlayOfServiceCard{
+    width: 100vw;
+    height: 100vh;
+    background: #151313;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+.cardOfService_title{
+    color: white;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+.cardOfService_content{
+    display: flex;
+    flex-direction: column;
+}
+.cardOfService_mainBlock{
+    border-top: 5px solid #664F2C;
+    display: flex;
+    justify-content: space-between;
+}
+.cardOfService_content__video{
+    width: 460px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: contain;
+}
+.cardOfService_content__images{
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.content_images__image{
+    width: 150px;
+    height: 150px;
+    margin: 0 5px 5px 0;
+    border-radius: 5px;
+}
+.cardOfService_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+.cardOfService_description__text{
+    overflow-y: auto;
+    scrollbar-width: thin;
+    white-space: normal;
+    padding: 15px 15px 0 5px;
+    box-sizing: border-box;
+    height: 390px;
+    margin: 0;
+    color: white;
+}
+.cardOfService_description__underDescription{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description_underDescription__details{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.underDescription_details__time{
+    margin: 0 5px 0 0;
+}
+.underDescription_details__cost{
+    margin-left: 10px;
+    color: white;
+}
+.description_underDescription__closeButton{
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #151313;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+    transition: 0.5s ease;
+}
+.description_underDescription__closeButton:hover{
+    color: #151313;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #151313;
+}
+@media screen and (max-width: 1110px) {
+    .servicesBlock{
+        padding: 50px 100px;
+    }
+    .cardOfServices_services__service:nth-child(even) {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .servicesBlock{
+        padding: 10px 30px;
+    }
+    .cardOfService_description__underDescription{
+        flex-direction: column;
+    }
+    .cardOfService_description__text{
+        height: 200px;
+    }
+    .cardOfService_description{
+        justify-content: center;
+    }
+    .cardOfService_mainBlock{
+        flex-direction: column;
+    }
+    .cardOfService{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .cardOfService_content__video{
+        width: 400px;
+        height: 250px;
+    }
+    .cardOfService_content__images{
+        flex-direction: column;
+        width: 400px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    .content_images__image{
+        width: 400px;
+        height: 250px;
+    }
+    .description_underDescription__closeButton{
+        border-radius: 5px;
+        border: 1px solid white;
+        background: #151313;
+        color: white;
+        width: 400px;
+        box-sizing: border-box;
+        height: 40px;
+        font-size: 14px;
+        padding: 0 20px;
+        transition: 0.5s ease;
+    }
+}
+@media screen and (max-width: 768px) {
+    .servicesBlock_titleOfService{
+        text-align: center;
+    }
+    .servicesBlock_cardOfServices__services{
+        flex-direction: column;
+        align-items: center;
+    }
+    .servicesBlock_cardOfServices{
+        padding: 10px 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .cardOfService{
+        padding: 10px 10px;
+    }
+    .cardOfService_content__video{
+        width: 300px;
+        height: 200px;
+    }
+    .cardOfService_content__images{
+        flex-direction: column;
+        width: 300px;
+        margin: 10px 0 10px 0;
+    }
+    .content_images__image{
+        width: 300px;
+        height: 200px;
+        border-radius: 0;
+        margin: 0;
+    }
+    .description_underDescription__closeButton{
+        width: 300px;
+    }
+    .cardOfService_description{
+        width: 300px;
+    }
+    .cardOfService{
+        border: none;
+        border-radius: 0;
+    }
+    .cardOfService_title{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .servicesBlock{
+        padding: 0 0;
+    }
+    .servicesBlock_cardOfServices{
+        margin: 0;
+    }
+}
+
+.messageFormContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #151313;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 0 20px 20px 20px;
+    z-index: 999;
+    width: 270px;
+}
+.messageFormContainer_titleLevel{
+    width: 100%;
+}
+.messageFormContainer_titleLevel img{
+    width: 15px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+}
+.messageFormContainer_titleLevel__title{
+    color: white;
+    text-align: center;
+}
+.messageFormContainer_messageForm{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.messageFormContainer_messageForm p{
+    color: white;
+    margin: 0 0 15px 0;
+}
+.messageFormContainer_messageForm input{
+    width: 250px;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+.messageFormContainer_messageForm{
+    color: white;
+}
+.messageFormContainer_messageForm textarea{
+    width: 250px;
+    box-sizing: border-box;
+    margin: 0;
+    resize: none;
+    font-size: 16px;
+}
+.messageFormContainer_messageForm__submitButton{
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: #151313;
+    color: white;
+    font-size: 16px;
+    padding: 5px 30px;
+    box-shadow: 5px 5px 5px rgba(196, 191, 191, 0.5);
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+.messageFormContainer_messageForm__submitButton:hover{
+    color: #151313;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #151313;
+    box-shadow: 10px 10px 10px rgba(21, 19, 19, 0.5);
+}
+.callBackFormOverlay{
+    width: 100vw;
+    height: 100vh;
+    background: #151313;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}

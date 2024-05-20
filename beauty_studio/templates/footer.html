@@ -1,0 +1,36 @@
+{% load static %}
+
+<footer class="footer">
+    <div class="footer_firstFloor">
+        <div class="footer_firstFloor_offerBlock">
+            <p class="firstFloor_offerBlock__title">Думаешь о сотрудничестве со студией?</p>
+            <div class="firstFloor_offerBlock_buttons">
+                <button class="offerBlock_buttons__button" id="openCallBackFormFooter">Напиши нам</button>
+                <a href="/partnership"><button class="offerBlock_buttons__button">Ознакомся с условиями</button></a>
+            </div>
+        </div>
+        <div class="footer_blockSeparate"></div>
+        <ul class="firstFloor_columns__pages">
+            <li><a href="/" class="columns_pages__page">Главная</a></li>
+            <li><a href="/services" class="columns_pages__page">Услуги</a></li>
+            <li><a href="/order" class="columns_pages__page">Запись</a></li>
+            <li><a href="/gallery" class="columns_pages__page">Галерея</a></li>
+            <li><a href="/partnership" class="columns_pages__page">Сотрудничество</a></li>
+        </ul>
+    </div>
+    <div class="footer_separate"></div>
+    <div class="footer_secondFloor">
+        <a href="/">
+            <div class="footer_secondFloor__logotype">
+                <img src="{% static 'images/footerImages/logo.svg' %}" alt="">
+                <h2 class="secondFloor_logotype__name">LazurenkoStudio</h2>
+            </div>
+        </a>
+        <div class="footer_secondFloor__socialMedias">
+            <a href="https://www.instagram.com/olga_hairstylist_official"><img src="{% static 'images/footerImages/instagramImg.svg' %}" alt=""></a>
+            <a href="https://t.me/Olga_lazurencko"><img src="{% static 'images/footerImages/telegramImg.svg' %}" alt=""></a>
+            <a href="https://vk.com/o.lazurenko"><img src="{% static 'images/footerImages/vkImg.svg' %}" alt=""></a>
+        </div>
+        <a href="/order"><button class="footer_secondFloor__button">Запишись</button></a>
+    </div>
+</footer>

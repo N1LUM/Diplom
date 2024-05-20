@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="order">
+    <div class="order_listOfServices">
+        {% for type in types %}
+            {% for service in services %}
+                {% if service.type.title == type.title %}
+                    <div class="order_listOfServices__service" data-id="{{ service.id }}">
+                        <p class="listOfServices_service__title">{{ service.title }}</p>
+                        <div class="listOfServices_service__info">
+                            <div class="service_info__time">
+                                <p class="info_time__hours">{{ service.hours }}ч</p>
+                                <p class="info_time__minutes">{{ service.minute }}мин</p>
+                            </div>
+                            <p class="service_info__cost">{{ service.cost }}руб</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="order_cart">
+        <form method="POST" action="" class="order_cart__form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="order_form_submit" value="1">
+            <input type="submit" value="Записаться" class="order_form__submit">
+            <p class="order_form__text">Нажимая "записаться" вы соглашаетесь с <a href="https://dg-home.ru/info/soglashenie_pers_dannie-dd.pdf">положением</a> об обработки персональных данных</p>
+        </form>
+        <div class="order_cart__items">
+            {% for chosenService in chosenServices %}
+                <div class="cart_items__service" id="{{ chosenService.id }}" data-id="{{ chosenService.id }}">
+                    <div class="items_service__nameAndCross">
+                        <p class="service_nameAndCross__title">{{ chosenService.title }}</p>
+                        <img src="{% static 'images/orderImages/cross.svg' %}" alt="" class="service_nameAndCross__img">
+                    </div>
+                    <div class="items_service__info">
+                        <div class="service_info__time">
+                            <p class="info_time__hours">{{ chosenService.hours }}ч</p>
+                            <p class="info_time__minutes">{{ chosenService.minute }}мин</p>
+                        </div>
+                        <p class="service_info__cost">{{ chosenService.cost }}руб</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="order_cart__resultCost">
+            <p class="cart_resultCost__cost">Цена: {{ total.cost }}руб</p>
+            <p class="cart_resultCost__time">Время: {{ total.hours }}ч {{ total.minutes }}мин</p>
+        </div>
+    </div>
+</div>
+
+<div class="callBackFormOverlay" id="overlayCallBackForm"></div>
+<div class="messageFormContainer" id="callBackForm">
+    <div class="messageFormContainer_titleLevel">
+        <p class="messageFormContainer_titleLevel__title">Отправка сообщения</p>
+        <img src="{% static 'images/homeImages/cross.svg' %}" alt="" id="closeCallBackForm">
+    </div>
+    <form method="POST" action="" class="messageFormContainer_messageForm">
+        {% csrf_token %}
+        {{ formCallBack.as_p }}
+        <input type="hidden" name="callback_form_submit" value="1">
+        <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
+    </form>
+</div>
+
+<script src="{% static 'scripts/navbar.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+<script>
+$(document).ready(function() {
+    $('.order_cart__form #id_number').inputmask('+7 (999) 999-99-99', {
+        minLength: 10
+    });
+    $('.messageFormContainer_messageForm #id_number').inputmask('+7 (999) 999-99-99', {
+        minLength: 10
+    });
+});
+</script>
+<script src="{% static 'scripts/order.js' %}"></script>
+<script src="{% static 'scripts/callBackForm.js' %}"></script>
+{% endblock %}
