@@ -9,19 +9,25 @@
                 <div class="partnership_block__column">
                     <p class="block_column__title">Условия</p>
                     <ul class="block_column__list">
-                        <li class="column_list__item">1. Стильный и просторный салон</li>
-                        <li class="column_list__item">2. Дружелюбный директор и коллектив</li>
-                        <li class="column_list__item">3. Холодильник, микроволновка, кофемашина</li>
-                        <li class="column_list__item">4. Визуально привлекательное, удобное рабочее место</li>
+                        <li class="column_list__item">1. Пaрикмаxeрcкоe кресло</li>
+                        <li class="column_list__item">2. Тележка парикмахерская</li>
+                        <li class="column_list__item">3. Мойка</li>
+                        <li class="column_list__item">4. Кольцевая лампа для фото</li>
+                        <li class="column_list__item">5. Шкафчик хранения материалов и личных вещей</li>
+                        <li class="column_list__item">6. Комната отдыха для персонала</li>
+                        <li class="column_list__item">7. Присутствует зона ожидания</li>
+                        <li class="column_list__item">8. Wi-Fi, кондиционер</li>
+                        <li class="column_list__item">9. Доступ в студию 24/7</li>
                     </ul>
                 </div>
                 <div class="partnership_block__column">
                     <p class="block_column__title">Требования</p>
                     <ul class="block_column__list">
-                        <li class="column_list__item">1. Уметь делать стрижки от каре до пикси</li>
-                        <li class="column_list__item">2. Окрашивание в разных тонах и техниках</li>
-                        <li class="column_list__item">3. Желание заработать больше, делая лучше</li>
-                        <li class="column_list__item">4. Быть адекватным и социально-адаптивным человеком, вежливость</li>
+                        <li class="column_list__item">1. Чистоплотность</li>
+                        <li class="column_list__item">2. Коммуникабельнось</li>
+                        <li class="column_list__item">3. Вежливость</li>
+                        <li class="column_list__item">4. Желание заработать больше, делая лучше</li>
+                        <li class="column_list__item">5. Опыт работы в сфере красоты от 5 лет</li>
                     </ul>
                 </div>
             </div>
@@ -31,26 +37,26 @@
                 <div class="partnership_block__column">
                     <p class="block_column__title">Условия</p>
                     <ul class="block_column__list">
-                        <li class="column_list__item">1. Стильный и просторный салон</li>
-                        <li class="column_list__item">2. Дружелюбный директор и коллектив</li>
-                        <li class="column_list__item">3. Холодильник, микроволновка, кофемашина</li>
-                        <li class="column_list__item">4. Визуально привлекательное, удобное рабочее место</li>
+                        <li class="column_list__item">1. Возможность получать обратную связь от клиентов студии<br> относительно продукции партнёра.</li>
+                        <li class="column_list__item">2. Возможность тестирования новых продуктов на клиентской базе студии и<br> получение отзывов.</li>
+                        <li class="column_list__item">3. Гарантия своевременной оплаты поставленных товаров и услуг<br> согласно оговоренным условиям.</li>
+                        <li class="column_list__item">4. Размещение логотипов и информации о партнёре в рекламных материалах студии<br> (листовки, буклеты, социальные сети).</li>
                     </ul>
                 </div>
                 <div class="partnership_block__column">
                     <p class="block_column__title">Требования</p>
                     <ul class="block_column__list">
-                        <li class="column_list__item">1. Уметь делать стрижки от каре до пикси</li>
-                        <li class="column_list__item">2. Окрашивание в разных тонах и техниках</li>
-                        <li class="column_list__item">3. Желание заработать больше, делая лучше</li>
-                        <li class="column_list__item">4. Быть адекватным и социально-адаптивным человеком, вежливость</li>
+                        <li class="column_list__item">1. Партнер должен иметь положительную репутацию на рынке.</li>
+                        <li class="column_list__item">2. Наличие отзывов и рекомендаций от других клиентов.</li>
+                        <li class="column_list__item">3. Заключение договора на длительный срок с возможностью пролонгации.</li>
+                        <li class="column_list__item">4. Конкурентоспособные и справедливые цены.</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="partnership_offerBlock">
             <p class="partnership_offerBlock__offerText">Заинтересовало предложение?</p>
-            <button class="partnership_offerBlock__offerButton">Связаться</button>
+            <button class="partnership_offerBlock__offerButton" id="openCallBackFormPartnership">Связаться</button>
         </div>
     </div>
 
@@ -73,11 +79,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
     <script>
-    $(document).ready(function() {
-        // Применяем маску ввода к полю номера телефона
-        $('#id_number').inputmask('+7 (999) 999-99-99', {
-            minLength: 10
+        $(document).ready(function() {
+            // Применяем маску ввода к полю номера телефона
+            $('#id_number').inputmask('+7 (999) 999-99-99', {
+                minLength: 10
+            });
+
+            // Обработчик отправки формы
+            $('#callBackForm').submit(function(event) {
+                // Получаем значение поля номера телефона
+                var number = $('#id_number').val();
+                // Удаляем пробелы, тире, скобки и подчеркивания из номера
+                var numberStripped = number.replace(/[\s-()_]/g, '');
+                // Проверяем длину номера
+                if (numberStripped.length < 12) {
+                    // Если номер слишком короткий, показываем сообщение об ошибке
+                    alert('Пожалуйста, введите полный номер телефона');
+                    // Останавливаем отправку формы
+                    event.preventDefault();
+                }
+            });
         });
-    });
     </script>
 {% endblock %}

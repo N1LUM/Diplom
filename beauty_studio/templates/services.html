@@ -92,11 +92,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
     <script>
-    $(document).ready(function() {
-        // Применяем маску ввода к полю номера телефона
-        $('#id_number').inputmask('+7 (999) 999-99-99', {
-            minLength: 10
+        $(document).ready(function() {
+            // Применяем маску ввода к полю номера телефона
+            $('#id_number').inputmask('+7 (999) 999-99-99', {
+                minLength: 10
+            });
+
+            // Обработчик отправки формы
+            $('#callBackForm').submit(function(event) {
+                // Получаем значение поля номера телефона
+                var number = $('#id_number').val();
+                // Удаляем пробелы, тире, скобки и подчеркивания из номера
+                var numberStripped = number.replace(/[\s-()_]/g, '');
+                // Проверяем длину номера
+                if (numberStripped.length < 12) {
+                    // Если номер слишком короткий, показываем сообщение об ошибке
+                    alert('Пожалуйста, введите полный номер телефона');
+                    // Останавливаем отправку формы
+                    event.preventDefault();
+                }
+            });
         });
-    });
     </script>
 {% endblock %}

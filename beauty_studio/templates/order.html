@@ -21,7 +21,7 @@
             {% endfor %}
         {% endfor %}
     </div>
-    <div class="order_cart">
+    <div class="order_cart" id="orderForm">
         <form method="POST" action="" class="order_cart__form">
             {% csrf_token %}
             {{ form.as_p }}
@@ -71,13 +71,50 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
 <script>
+    $(document).ready(function() {
+        // Применяем маску ввода к полю номера телефона формы заказа
+        $('#orderForm #id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+        // Применяем маску ввода к полю номера телефона формы обратной связи
+        $('#callBackForm #id_number').inputmask('+7 (999) 999-99-99', {
+            minLength: 10
+        });
+
+        // Обработчик отправки формы заказа
+        $('#orderForm').submit(function(event) {
+            // Получаем значение поля номера телефона
+            var number = $('#orderForm #id_number').val();
+            // Удаляем пробелы, тире, скобки и подчеркивания из номера
+            var numberStripped = number.replace(/[\s-()_]/g, '');
+            // Проверяем длину номера
+            if (numberStripped.length < 12) {
+                // Если номер слишком короткий, показываем сообщение об ошибке
+                alert('Пожалуйста, введите полный номер телефона');
+                // Останавливаем отправку формы
+                event.preventDefault();
+            }
+        });
+
+        // Обработчик отправки формы обратной связи
+        $('#callBackForm').submit(function(event) {
+            // Получаем значение поля номера телефона
+            var number = $('#callBackForm #id_number').val();
+            // Удаляем пробелы, тире, скобки и подчеркивания из номера
+            var numberStripped = number.replace(/[\s-()_]/g, '');
+            // Проверяем длину номера
+            if (numberStripped.length < 12) {
+                // Если номер слишком короткий, показываем сообщение об ошибке
+                alert('Пожалуйста, введите полный номер телефона');
+                // Останавливаем отправку формы
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+<script>
 $(document).ready(function() {
-    $('.order_cart__form #id_number').inputmask('+7 (999) 999-99-99', {
-        minLength: 10
-    });
-    $('.messageFormContainer_messageForm #id_number').inputmask('+7 (999) 999-99-99', {
-        minLength: 10
-    });
+
 });
 </script>
 <script src="{% static 'scripts/order.js' %}"></script>

@@ -1,4 +1,15 @@
 from django.db import models
+from cryptography.fernet import Fernet
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Получение ключа шифрования из переменных окружения
+key = os.getenv('FERNET_KEY')
+if not key:
+    raise ValueError("No Fernet key found in environment variables. Please set FERNET_KEY in your .env file.")
+cipher_suite = Fernet(key)
 
 # Create your models here.
 
@@ -60,7 +71,7 @@ class Service(models.Model):
 
 class Gallery(models.Model):
     title = models.CharField(max_length=100, default="Произведение")
-    image = models.ImageField(upload_to='./static/filesForService/gallery/', null=False, default="")
+    image = models.ImageField(upload_to='./static/filesForGallery/', null=False, default="")
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
@@ -72,15 +83,39 @@ class Gallery(models.Model):
         verbose_name_plural = 'Галлереи'
 
 class Order(models.Model):
-    name = models.CharField(max_length=100, blank=False, null=False, verbose_name='Имя')
-    lastname = models.CharField(max_length=100, blank=False, null=False, verbose_name='Фамилия')
-    number = models.CharField(max_length=100, blank=False, null=False, verbose_name='Номер')
-    services = models.ManyToManyField(Service, related_name='chosenServices', null=False, verbose_name='Услуги')
+    name = models.CharField(max_length=255, blank=False, null=False, verbose_name='Имя')
+    lastname = models.CharField(max_length=255, blank=False, null=False, verbose_name='Фамилия')
+    number = models.CharField(max_length=255, blank=False, null=False, verbose_name='Номер')
+    services = models.ManyToManyField('Service', related_name='chosenServices', verbose_name='Услуги')
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    def decrypt_name(self):
+        try:
+            decrypted_name = cipher_suite.decrypt(self.name.encode('utf-8')).decode('utf-8')
+            return decrypted_name
+        except Exception as e:
+            print(f"Error decrypting name: {e}")
+            return None
+
+    def decrypt_lastname(self):
+        try:
+            decrypted_lastname = cipher_suite.decrypt(self.lastname.encode('utf-8')).decode('utf-8')
+            return decrypted_lastname
+        except Exception as e:
+            print(f"Error decrypting lastname: {e}")
+            return None
+
+    def decrypt_number(self):
+        try:
+            decrypted_number = cipher_suite.decrypt(self.number.encode('utf-8')).decode('utf-8')
+            return decrypted_number
+        except Exception as e:
+            print(f"Error decrypting number: {e}")
+            return None
+
     def __str__(self):
-        return f"{self.name} {self.lastname} {self.number}"
+        return f"{self.decrypt_name()} {self.decrypt_lastname()} {self.decrypt_number()}"
 
     class Meta:
         verbose_name = 'Запись'
@@ -88,15 +123,39 @@ class Order(models.Model):
         ordering = ['-created']
 
 class MessageForDirector(models.Model):
-    name = models.CharField(max_length=100, blank=False, null=False, verbose_name='Имя')
-    lastname = models.CharField(max_length=100, blank=False, null=False, verbose_name='Фамилия')
-    number = models.CharField(max_length=100, blank=False, null=False, verbose_name='Номер')
-    text = models.TextField(blank=False,null=True, verbose_name='Текст сообщения')
+    name = models.CharField(max_length=255, blank=False, null=False, verbose_name='Имя')
+    lastname = models.CharField(max_length=255, blank=False, null=False, verbose_name='Фамилия')
+    number = models.CharField(max_length=255, blank=False, null=False, verbose_name='Номер')
+    text = models.TextField(blank=False, null=True, verbose_name='Текст сообщения')
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    def decrypt_name(self):
+        try:
+            decrypted_name = cipher_suite.decrypt(self.name.encode('utf-8')).decode('utf-8')
+            return decrypted_name
+        except Exception as e:
+            print(f"Error decrypting name: {e}")
+            return None
+
+    def decrypt_lastname(self):
+        try:
+            decrypted_lastname = cipher_suite.decrypt(self.lastname.encode('utf-8')).decode('utf-8')
+            return decrypted_lastname
+        except Exception as e:
+            print(f"Error decrypting lastname: {e}")
+            return None
+
+    def decrypt_number(self):
+        try:
+            decrypted_number = cipher_suite.decrypt(self.number.encode('utf-8')).decode('utf-8')
+            return decrypted_number
+        except Exception as e:
+            print(f"Error decrypting number: {e}")
+            return None
+
     def __str__(self):
-        return f"{self.name} {self.lastname} {self.number}"
+        return f"{self.decrypt_name()} {self.decrypt_lastname()} {self.decrypt_number()}"
 
     class Meta:
         verbose_name = 'Сообщение обратной связи'

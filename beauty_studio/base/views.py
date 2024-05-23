@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.http import HttpResponseBadRequest
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .models import Service, Type, Gallery
@@ -6,19 +6,20 @@ from .forms import OrderForm, MessageForDirectorForm
 import json
 from django.core import serializers
 
+
 def home(request):
+    formCallBack = MessageForDirectorForm(request.POST or None)
     if request.method == 'POST':
         formCallBack = MessageForDirectorForm(request.POST)
         if formCallBack.is_valid():
             formCallBack.save()
-            return redirect('home')
-    else:
-        formCallBack = MessageForDirectorForm()
+            return redirect('completeForm')
+        else:
+            return render(request, 'home.html', {'formCallBack': formCallBack})
 
     context = {
         'formCallBack': formCallBack
     }
-
     return render(request, 'home.html', context)
 
 def services(request):
@@ -26,7 +27,9 @@ def services(request):
         formCallBack = MessageForDirectorForm(request.POST)
         if formCallBack.is_valid():
             formCallBack.save()
-            return redirect('services')
+            return redirect('completeForm')
+        else:
+            return render(request, 'services.html', {'formCallBack': formCallBack})
     else:
         formCallBack = MessageForDirectorForm()
 
@@ -58,12 +61,14 @@ def order(request):
                 order_instance.save()
                 order_instance.services.set(chosen_services)
                 del request.session['chosenServices']
-                return redirect('order')
+                return redirect('completeForm')
         elif 'callback_form_submit' in request.POST:
             formCallBack = MessageForDirectorForm(request.POST)
             if formCallBack.is_valid():
                 formCallBack.save()
-                return redirect('order')
+                return redirect('completeForm')
+            else:
+                return render(request, 'order.html', {'formCallBack': formCallBack})
 
     types = Type.objects.all()
     services = Service.objects.all()
@@ -121,7 +126,9 @@ def gallery(request):
         formCallBack = MessageForDirectorForm(request.POST)
         if formCallBack.is_valid():
             formCallBack.save()
-            return redirect('gallery')
+            return redirect('completeForm')
+        else:
+            return render(request, 'gallery.html', {'formCallBack': formCallBack})
     else:
         formCallBack = MessageForDirectorForm()
 
@@ -134,7 +141,9 @@ def partnership(request):
         formCallBack = MessageForDirectorForm(request.POST)
         if formCallBack.is_valid():
             formCallBack.save()
-            return redirect('partnership')
+            return redirect('completeForm')
+        else:
+            return render(request, 'partnership.html', {'formCallBack': formCallBack})
     else:
         formCallBack = MessageForDirectorForm()
 
@@ -142,6 +151,20 @@ def partnership(request):
 
     return render(request, 'partnership.html', context)
 
+def completeForm(request):
+    formCallBack = MessageForDirectorForm(request.POST or None)
+    if request.method == 'POST':
+        formCallBack = MessageForDirectorForm(request.POST)
+        if formCallBack.is_valid():
+            formCallBack.save()
+            return redirect('completeForm')
+        else:
+            return render(request, 'completeForm.html', {'formCallBack': formCallBack})
+
+    context = {
+        'formCallBack': formCallBack
+    }
+    return render(request, 'completeForm.html', context)
 
 def add_to_chosen_services(request):
     if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
