@@ -1,31 +1,32 @@
 {% load static %}
-
-<nav class="navbar ">
-    <a href="/">
-        <div class="navbar_logotype">
-            <img src="{% static 'images/navbarImages/logo.svg' %}" alt="">
-            <h2 class="navbar_logotype__name">LazurenkoStudio</h2>
+<header>
+    <nav class="navbar ">
+        <a href="/">
+            <div class="navbar_logotype">
+                <img src="{% static 'images/navbarImages/logo.svg' %}" alt="">
+                <h2 class="navbar_logotype__name">LazurenkoStudio</h2>
+            </div>
+        </a>
+        <img src="{% static 'images/navbarImages/burgerMenu.svg' %}" alt="" class="navbar_burgerMenu" id="open-sidebar">
+        <!--Sidebar-->
+        <div class="sidebar" id="sidebar">
+            <button  class="sidebar_cross" id="close-sidebar"><img src="{% static 'images/navbarImages/cross.svg' %}" alt=""></button>
+            <ul class="sidebar_links">
+                <li><a href="/" class="sidebar_links__link">Главная</a></li>
+                <li><a href="/services" class="sidebar_links__link">Услуги</a></li>
+                <li><a href="/order" class="sidebar_links__link">Запись</a></li>
+                <li><a href="/gallery" class="sidebar_links__link">Галерея</a></li>
+                <li><a href="/partnership" class="sidebar_links__link">Сотрудничество</a></li>
+            </ul>
+            <button class="sidebar_button" id="openCallBackFormNavbar">Связаться с нами</button>
+            <ul class="sidebar_contacts">
+                <li><a href="https://www.instagram.com/olga_hairstylist_official" class="sidebar_contacts__contact">Instagram</a></li>
+                <li><a href="https://t.me/Olga_lazurencko" class="sidebar_contacts__contact">Telegram</a></li>
+                <li><a href="https://vk.com/o.lazurenko" class="sidebar_contacts__contact">Vkontakte</a></li>
+            </ul>
         </div>
-    </a>
-    <img src="{% static 'images/navbarImages/burgerMenu.svg' %}" alt="" class="navbar_burgerMenu" id="open-sidebar">
-    <!--Sidebar-->
-    <div class="sidebar" id="sidebar">
-        <button  class="sidebar_cross" id="close-sidebar"><img src="{% static 'images/navbarImages/cross.svg' %}" alt=""></button>
-        <ul class="sidebar_links">
-            <li><a href="/" class="sidebar_links__link">Главная</a></li>
-            <li><a href="/services" class="sidebar_links__link">Услуги</a></li>
-            <li><a href="/order" class="sidebar_links__link">Запись</a></li>
-            <li><a href="/gallery" class="sidebar_links__link">Галерея</a></li>
-            <li><a href="/partnership" class="sidebar_links__link">Сотрудничество</a></li>
-        </ul>
-        <button class="sidebar_button" id="openCallBackFormNavbar">Связаться с нами</button>
-        <ul class="sidebar_contacts">
-            <li><a href="https://www.instagram.com/olga_hairstylist_official" class="sidebar_contacts__contact">Instagram</a></li>
-            <li><a href="https://t.me/Olga_lazurencko" class="sidebar_contacts__contact">Telegram</a></li>
-            <li><a href="https://vk.com/o.lazurenko" class="sidebar_contacts__contact">Vkontakte</a></li>
-        </ul>
-    </div>
-</nav>
+    </nav>
+</header>
 
 
 

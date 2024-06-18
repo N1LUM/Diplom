@@ -31,20 +31,11 @@ class OrderForm(forms.ModelForm):
     def save(self, commit=True):
         instance = super().save(commit=False)
 
-        print("Данные перед шифрованием:")
-        print("Имя:", self.cleaned_data['name'])
-        print("Фамилия:", self.cleaned_data['lastname'])
-        print("Номер:", self.cleaned_data['number'])
-
         # Шифрование данных и преобразование в строку
         instance.name = cipher_suite.encrypt(self.cleaned_data['name'].encode('utf-8')).decode('utf-8')
         instance.lastname = cipher_suite.encrypt(self.cleaned_data['lastname'].encode('utf-8')).decode('utf-8')
         instance.number = cipher_suite.encrypt(self.cleaned_data['number'].encode('utf-8')).decode('utf-8')
-
-        print("Данные после шифрования:")
-        print("Имя:", instance.name)
-        print("Фамилия:", instance.lastname)
-        print("Номер:", instance.number)
+        instance.confirmed_id = 1
 
         if commit:
             instance.save()
@@ -74,19 +65,10 @@ class MessageForDirectorForm(forms.ModelForm):
 
     def save(self, commit=True):
         instance = super().save(commit=False)
-        print("Данные перед шифрованием:")
-        print("Имя:", self.cleaned_data['name'])
-        print("Фамилия:", self.cleaned_data['lastname'])
-        print("Номер:", self.cleaned_data['number'])
 
         instance.name = cipher_suite.encrypt(self.cleaned_data['name'].encode('utf-8')).decode('utf-8')
         instance.lastname = cipher_suite.encrypt(self.cleaned_data['lastname'].encode('utf-8')).decode('utf-8')
         instance.number = cipher_suite.encrypt(self.cleaned_data['number'].encode('utf-8')).decode('utf-8')
-
-        print("Данные после шифрования:")
-        print("Имя:", instance.name)
-        print("Фамилия:", instance.lastname)
-        print("Номер:", instance.number)
 
         if commit:
             instance.save()

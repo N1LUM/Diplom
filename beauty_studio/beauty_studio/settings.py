@@ -14,8 +14,7 @@ SECRET_KEY = 'django-insecure-y$glc#-m@$!p9lze($jl&+t62t3u_8-v6irt@fh6fs-+c@jhg&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['89.111.174.239', '127.0.0.1', 'localhost', 'lazurenko-hairstyle.ru']
 
 # Application definition
 
@@ -60,6 +59,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'beauty_studio.wsgi.application'
+
+USE_ASGI = True
+
+# Укажите путь к вашему ASGI приложению
+ASGI_APPLICATION = 'beauty_studio.asgi.application'
+
 
 
 # Database

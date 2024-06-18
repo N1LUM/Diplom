@@ -24,12 +24,11 @@
 .order_listOfServices__service{
     background: #151313;
     width: 300px;
-    height: 80px;
     box-shadow: 5px 5px 5px rgba(21,19,19, 0.3);
     border: 1px solid #151313;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -45,6 +44,7 @@
    margin: 0;
 }
 .listOfServices_service__info{
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -99,13 +99,13 @@
     overflow-y: auto;
     background: white;
     scrollbar-width: thin;
+    border: 2px solid white;
     padding: 10px;
     box-sizing: border-box;
 }
 .cart_items__service{
     background: #151313;
     width: 300px;
-    height: 80px;
     box-shadow: 5px 5px 5px rgba(21,19,19, 0.3);
     border: 1px solid #151313;
     border-radius: 5px;
@@ -136,6 +136,7 @@
     margin: 0;
 }
 .items_service__info{
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -288,5 +289,14 @@
     z-index: 998;
     opacity: 0.9;
     transition: 0.3s ease;
+}
+.messageFormContainer_messageForm__text{
+    color: white;
+    margin: 15px 0 5px 0;
+    text-align: center;
+}
+.messageFormContainer_messageForm__text a{
+    color: #CDAC7B;
+    text-decoration: none;
 }
 

@@ -182,3 +182,12 @@
     opacity: 0.9;
     transition: 0.3s ease;
 }
+.messageFormContainer_messageForm__text{
+    color: white;
+    margin: 15px 0 5px 0;
+    text-align: center;
+}
+.messageFormContainer_messageForm__text a{
+    color: #CDAC7B;
+    text-decoration: none;
+}

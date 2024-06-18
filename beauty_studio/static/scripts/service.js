@@ -1,7 +1,7 @@
 
 const closeButton = document.getElementById('closeButton');
 const cardOfService = document.getElementById('carOfService');
-const overlayService = document.getElementById('ovelayService');
+const overlayService = document.getElementById('overlayService');
 closeButton.addEventListener('click', (e) => {
     // Получаем родительский элемент изображений
     var imageContainer = document.querySelector('.cardOfService_content__images');
@@ -26,6 +26,7 @@ document.querySelectorAll('.cardOfServices_services__service').forEach(function(
         const serviceMinutes = document.getElementById('serviceMinutes');
         const serviceCost = document.getElementById('serviceCost');
         const cardOfService = document.getElementById('carOfService');
+        const screenWidth = window.innerWidth;
 
         // Обработка данных перед парсингом JSON
         let serviceDataString = this.dataset.service.replace(/(?:\r\n|\r|\n)/g, " ");
@@ -49,22 +50,43 @@ document.querySelectorAll('.cardOfServices_services__service').forEach(function(
             serviceMinutes.textContent = serviceData.minute + "мин";
             serviceCost.textContent = serviceData.cost + "руб";
 
-            serviceData.images.forEach(function(image) {
-                // Создание нового элемента <img>
-                var newImage = document.createElement('img');
+            if (screenWidth > 1024) {
+                serviceData.images.forEach(function(image) {
+                    // Создание нового элемента <img>
+                    var newImage = document.createElement('img');
 
-                // Установка класса для нового изображения
-                newImage.className = 'content_images__image';
+                    // Установка класса для нового изображения
+                    newImage.className = 'content_images__image';
 
-                // Установка атрибута src для нового изображения
-                newImage.src = image.url;
+                    // Установка атрибута src для нового изображения
+                    newImage.src = image.url;
 
-                // Установка атрибута alt для нового изображения
-                newImage.alt = ' ';
+                    // Установка атрибута alt для нового изображения
+                    newImage.alt = ' ';
 
-                // Добавление нового изображения в элемент с классом "cardOfService_content__images"
-                document.querySelector('.cardOfService_content__images').appendChild(newImage);
-            });
+                    // Добавление нового изображения в элемент с классом "cardOfService_content__images"
+                    document.querySelector('.cardOfService_content__images').appendChild(newImage);
+                });
+            } else {
+                serviceData.images.forEach(function(image, index) {
+                    if (index === 0) {
+                        // Создание нового элемента <img>
+                        var newImage = document.createElement('img');
+
+                        // Установка класса для нового изображения
+                        newImage.className = 'content_images__image';
+
+                        // Установка атрибута src для нового изображения
+                        newImage.src = image.url;
+
+                        // Установка атрибута alt для нового изображения
+                        newImage.alt = ' ';
+
+                        // Добавление нового изображения в элемент с классом "cardOfService_content__images"
+                        document.querySelector('.cardOfService_content__images').appendChild(newImage);
+                    }
+                });
+            }
 
             // Показываем блок с данными о сервисе
             cardOfService.style.display = 'flex';

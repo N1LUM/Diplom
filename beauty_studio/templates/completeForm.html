@@ -1,15 +1,46 @@
-{% extends 'main.html' %}
+<!DOCTYPE html>
 {% load static %}
-
-{% block content %}
-    <div class="completeForm">
-        <p class="completeForm_title">Форма успешно отправлена!</p>
-        <a href="/"><button class="completeForm_returnButton">Главная</button></a>
-        <a href="/services"><button class="completeForm_returnButton">Услуги</button></a>
-        <a href="/order"><button class="completeForm_returnButton">Запись</button></a>
-        <a href="/gallery"><button class="completeForm_returnButton">Галерея</button></a>
-        <a href="/partnership"><button class="completeForm_returnButton">Сотрудничество</button></a>
-    </div>
+<html lang="ru">
+<head>
+    <!-- Обычные мета-теги -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Студия Ольги Лазуреко. Окрашивание, укладки, стрижки и уходовые процедуры за волосами">
+    <meta name="keywords" content="Окрашивание, Стрижка, Укладка, Уход за волосами, Студия Ольги Лазуренко, Лазуренко, Ольга Лазуренко, Студия красоты, Салон красоты">
+    <meta name="author" content="Лазуренко Сергей">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph теги -->
+    <meta property="og:title" content="Студия красоты Ольги Лазуренко">
+    <meta property="og:description" content="Окрашивания, стрижки, укладки и уход за волосами в лучшей студии красоты Ростова-на-Дону. Позволь себе выглядить сногшибательно!">
+    <meta property="og:image" content="{% static 'images/navbarImages/logo.svg' %}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Студия красоты Ольги Лазуренко">
+    <meta property="og:locale" content="ru_RU">
+    <!-- Название вкладки в браузере -->
+    <title>Студия Ольги Лазуренко</title>
+    <!-- Картинка во вкладке -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/navbarImages/logo.svg' %}">
+    <!-- Подключение шрифтов и стилей -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/completeForm.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <main>
+        <div class="completeForm">
+            <p class="completeForm_title">Форма успешно отправлена!</p>
+            <a href="/"><button class="completeForm_returnButton">Главная</button></a>
+            <a href="/services"><button class="completeForm_returnButton">Услуги</button></a>
+            <a href="/order"><button class="completeForm_returnButton">Запись</button></a>
+            <a href="/gallery"><button class="completeForm_returnButton">Галерея</button></a>
+            <a href="/partnership"><button class="completeForm_returnButton">Сотрудничество</button></a>
+        </div>
+    </main>
+    {% include 'footer.html' %}
 
     <div class="callBackFormOverlay" id="overlayCallBackForm"></div>
     <div class="messageFormContainer" id="callBackForm">
@@ -20,36 +51,14 @@
         <form method="POST" action="" class="messageFormContainer_messageForm">
             {% csrf_token %}
             {{ formCallBack.as_p }}
+            <p class="messageFormContainer_messageForm__text">Нажимая "записаться" вы соглашаетесь с <a href="/privacy">положением</a> об обработки персональных данных</p>
             <input type="submit" value="Отправить" class="messageFormContainer_messageForm__submitButton">
         </form>
     </div>
+</body>
 
-    <script src="{% static 'scripts/navbar.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
-    <script>
-        $(document).ready(function() {
-            // Применяем маску ввода к полю номера телефона
-            $('#id_number').inputmask('+7 (999) 999-99-99', {
-                minLength: 10
-            });
-
-            // Обработчик отправки формы
-            $('#callBackForm').submit(function(event) {
-                // Получаем значение поля номера телефона
-                var number = $('#id_number').val();
-                // Удаляем пробелы, тире, скобки и подчеркивания из номера
-                var numberStripped = number.replace(/[\s-()_]/g, '');
-                // Проверяем длину номера
-                if (numberStripped.length < 12) {
-                    // Если номер слишком короткий, показываем сообщение об ошибке
-                    alert('Пожалуйста, введите полный номер телефона');
-                    // Останавливаем отправку формы
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
-
-    <script src="{% static 'scripts/callBackForm.js' %}"></script>
-{% endblock %}
+<script src="{% static 'scripts/navbar.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'scripts/jquery.inputmask.min.js' %}"></script>
+<script src="{% static 'scripts/callBackForm.js' %}"></script>
+</html>
