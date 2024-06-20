@@ -5197,3 +5197,487 @@ File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\contrib\messag
 File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1716838033.2756827
 File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1716838030.5839105
 File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\context_processors.py first seen with mtime 1716838034.1819572
+(0.000) SELECT "base_order"."id", "base_order"."name", "base_order"."lastname", "base_order"."number", "base_order"."confirmed_id", "base_order"."updated", "base_order"."created" FROM "base_order" INNER JOIN "base_conditionoforder" ON ("base_order"."confirmed_id" = "base_conditionoforder"."id") WHERE "base_conditionoforder"."name" = 'Не подтверждена' ORDER BY "base_order"."created" DESC; args=('Не подтверждена',); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service" INNER JOIN "base_order_services" ON ("base_service"."id" = "base_order_services"."service_id") WHERE "base_order_services"."order_id" = 15; args=(15,); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service" INNER JOIN "base_order_services" ON ("base_service"."id" = "base_order_services"."service_id") WHERE "base_order_services"."order_id" = 14; args=(14,); alias=default
+"GET /sendAllNotConfirmedOrdersToTelegram/ HTTP/1.1" 200 16
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\backends\openssl\__init__.py first seen with mtime 1716469949.5221493
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\extensions.py first seen with mtime 1716469949.6131876
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\backends\openssl\ciphers.py first seen with mtime 1716469949.5241504
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\__init__.py first seen with mtime 1716469949.611187
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\general_name.py first seen with mtime 1716469949.6131876
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\asymmetric\x448.py first seen with mtime 1716469949.6000953
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\verification.py first seen with mtime 1716469949.6161876
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\oid.py first seen with mtime 1716469949.6151865
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\constant_time.py first seen with mtime 1716469949.5910976
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\backends\openssl\aead.py first seen with mtime 1716469949.5221493
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\anyio\_backends\__init__.py first seen with mtime 1718577184.9866436
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\serialization\pkcs12.py first seen with mtime 1716469949.6081884
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\asymmetric\x25519.py first seen with mtime 1716469949.5990958
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\bindings\openssl\_conditional.py first seen with mtime 1716469949.587095
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\bindings\openssl\binding.py first seen with mtime 1716469949.5880957
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\asymmetric\ed448.py first seen with mtime 1716469949.5960946
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\backends\openssl\backend.py first seen with mtime 1716469949.523148
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\base.py first seen with mtime 1716469949.6121879
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\bindings\openssl\__init__.py first seen with mtime 1716469949.587095
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\hazmat\primitives\asymmetric\dh.py first seen with mtime 1716469949.5940957
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\anyio\_backends\_asyncio.py first seen with mtime 1718577184.9886441
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\certificate_transparency.py first seen with mtime 1716469949.6121879
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\cryptography\x509\name.py first seen with mtime 1716469949.6141872
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 19:21:22.190127' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 19:21:22.190127', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT "base_order"."id", "base_order"."name", "base_order"."lastname", "base_order"."number", "base_order"."confirmed_id", "base_order"."updated", "base_order"."created" FROM "base_order" ORDER BY "base_order"."created" DESC, "base_order"."id" DESC; args=(); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 3 LIMIT 21; args=(3,); alias=default
+"GET /admin/base/order/ HTTP/1.1" 200 14297
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 19:21:22.405700' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 19:21:22.405700', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'services' [name='services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'order' [name='order']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'gallery' [name='gallery']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'partnership' [name='partnership']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'completeForm' [name='completeForm']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'privacy' [name='privacy']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'add_to_chosen_services/' [name='add_to_chosen_services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'delete_from_chosen_services/' [name='delete_from_chosen_services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'sendAllNotConfirmedOrdersToTelegram/' [name='sendAllNotConfirmedOrdersToTelegram']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'confirmOrder/<str:order_id>' [name='confirmOrder']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'cancelOrder/<str:order_id>' [name='cancelOrder']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4352
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\conf\locale\ru\__init__.py first seen with mtime 1716838029.5976498
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\tzdata\zoneinfo\__init__.py first seen with mtime 1715772878.5257704
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\tzdata\zoneinfo\Europe\__init__.py first seen with mtime 1715772878.7416897
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\tzdata\__init__.py first seen with mtime 1715772878.5057433
+File D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\conf\locale\ru\formats.py first seen with mtime 1716838029.5986493
+"GET /partnership HTTP/1.1" 200 12435
+"GET /static/styles/partnership.css HTTP/1.1" 200 4250
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 20:05:54.219179' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 20:05:54.219179', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.015) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.016) UPDATE "django_session" SET "session_data" = '.eJxVjL0OwiAURt-F2RB-bIGO7k6OxjRw70WqDSSldTG-u23SQdfvnO-8We-XOfVLpakfkHVMssPvFjw8KW8AHz7fC4eS52kIfFP4Tis_F6TxtLt_geRrWt8gnbbRaG-1V84a9K1TIgaDUSqlhDBAsUWNiA0hWgogROOiU608Cg1rFFKplC80vQagyrrr7fMFi_A_Kg:1sK1Z4:90lPr3huIZuoFGQt_N20l4AY-yyvA6rPAydB9Yj-GZQ', "expire_date" = '2024-07-03 20:05:54.294179' WHERE "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'; args=('.eJxVjL0OwiAURt-F2RB-bIGO7k6OxjRw70WqDSSldTG-u23SQdfvnO-8We-XOfVLpakfkHVMssPvFjw8KW8AHz7fC4eS52kIfFP4Tis_F6TxtLt_geRrWt8gnbbRaG-1V84a9K1TIgaDUSqlhDBAsUWNiA0hWgogROOiU608Cg1rFFKplC80vQagyrrr7fMFi_A_Kg:1sK1Z4:90lPr3huIZuoFGQt_N20l4AY-yyvA6rPAydB9Yj-GZQ', '2024-07-03 20:05:54.294179', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.109) COMMIT; args=None; alias=default
+"GET /order HTTP/1.1" 200 25593
+"GET /static/styles/order.css HTTP/1.1" 304 0
+"GET /static/scripts/orderForm.js HTTP/1.1" 304 0
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 1; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 5 LIMIT 21; args=(5,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 2; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 6 LIMIT 21; args=(6,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 3; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 23 LIMIT 21; args=(23,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 18; args=(18,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 7 LIMIT 21; args=(7,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 19; args=(19,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 8 LIMIT 21; args=(8,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 20; args=(20,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 9 LIMIT 21; args=(9,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 21; args=(21,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 14 LIMIT 21; args=(14,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 4; args=(4,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 15 LIMIT 21; args=(15,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 5; args=(5,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 16 LIMIT 21; args=(16,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 6; args=(6,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 20 LIMIT 21; args=(20,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 23; args=(23,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 21 LIMIT 21; args=(21,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 24; args=(24,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 22 LIMIT 21; args=(22,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 25; args=(25,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 17 LIMIT 21; args=(17,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 7; args=(7,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 18 LIMIT 21; args=(18,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 8; args=(8,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 19 LIMIT 21; args=(19,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 9; args=(9,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 12 LIMIT 21; args=(12,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 10; args=(10,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 11 LIMIT 21; args=(11,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 11; args=(11,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 13 LIMIT 21; args=(13,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 12; args=(12,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 10 LIMIT 21; args=(10,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 22; args=(22,); alias=default
+"GET /services HTTP/1.1" 200 66432
+"GET /static/styles/services.css HTTP/1.1" 304 0
+"GET /static/scripts/service.js HTTP/1.1" 200 6040
+"GET /static/filesForService/image_10.png HTTP/1.1" 200 1012702
+"GET /static/filesForService/image_9_1.png HTTP/1.1" 200 1522164
+- Broken pipe from ('127.0.0.1', 57035)
+"GET /static/filesForService/image_8.png HTTP/1.1" 200 2704005
+"GET /static/filesForService/video_2024-05-22_21-33-34_k8NUkIL.mp4 HTTP/1.1" 200 10340265
+"GET /privacy HTTP/1.1" 200 40976
+"GET /static/styles/privacy.css HTTP/1.1" 200 2884
+"GET / HTTP/1.1" 200 14623
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:16:23.883274' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:16:23.883274', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+"GET /order HTTP/1.1" 200 25593
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:22:16.179592' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:22:16.179592', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+"GET /order HTTP/1.1" 200 25593
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:22:17.159165' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:22:17.159165', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT "base_order"."id", "base_order"."name", "base_order"."lastname", "base_order"."number", "base_order"."confirmed_id", "base_order"."updated", "base_order"."created" FROM "base_order" ORDER BY "base_order"."created" DESC, "base_order"."id" DESC; args=(); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 3 LIMIT 21; args=(3,); alias=default
+"GET /admin/base/order/ HTTP/1.1" 200 14297
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:22:17.225028' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:22:17.225028', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\core\handlers\base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\urls\resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'services' [name='services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'order' [name='order']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'gallery' [name='gallery']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'partnership' [name='partnership']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'completeForm' [name='completeForm']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'privacy' [name='privacy']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'add_to_chosen_services/' [name='add_to_chosen_services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'delete_from_chosen_services/' [name='delete_from_chosen_services']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'sendAllNotConfirmedOrdersToTelegram/' [name='sendAllNotConfirmedOrdersToTelegram']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'confirmOrder/<str:order_id>' [name='confirmOrder']>], [<URLResolver <module 'base.urls' from 'D:\\Diplom\\Product\\beauty_studio\\base\\urls.py'> (None:None) ''>, <URLPattern 'cancelOrder/<str:order_id>' [name='cancelOrder']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Diplom\Product\beauty_studio\env\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4352
+"GET /partnership HTTP/1.1" 200 12435
+"GET /static/styles/partnership.css HTTP/1.1" 200 4250
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:37:04.654197' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:37:04.654197', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_order"; args=(); alias=default
+(0.000) SELECT "base_order"."id", "base_order"."name", "base_order"."lastname", "base_order"."number", "base_order"."confirmed_id", "base_order"."updated", "base_order"."created" FROM "base_order" ORDER BY "base_order"."created" DESC, "base_order"."id" DESC; args=(); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_conditionoforder"."id", "base_conditionoforder"."name", "base_conditionoforder"."updated", "base_conditionoforder"."created" FROM "base_conditionoforder" WHERE "base_conditionoforder"."id" = 3 LIMIT 21; args=(3,); alias=default
+"GET /admin/base/order/ HTTP/1.1" 200 14297
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:37:04.711195' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:37:04.711195', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:52:57.749118' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:52:57.749118', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.078) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_service"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service" ORDER BY "base_service"."id" DESC; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/base/service/ HTTP/1.1" 200 34374
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:53:01.656498' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:53:01.656498', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:53:09.417585' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:53:09.417585', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service" WHERE "base_service"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 2; args=(2,); alias=default
+(0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'base' AND "django_content_type"."model" = 'service') LIMIT 21; args=('base', 'service'); alias=default
+(0.000) COMMIT; args=None; alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video"; args=(); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+"GET /admin/base/service/2/change/ HTTP/1.1" 200 24899
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:53:10.919144' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:53:10.919144', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/jsi18n/ HTTP/1.1" 200 16066
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 21:53:25.889437' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 21:53:25.889437', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_service"; args=(); alias=default
+(0.000) SELECT COUNT(*) AS "__count" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service" ORDER BY "base_service"."id" DESC; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+"GET /admin/base/service/ HTTP/1.1" 200 34374
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 1; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 5 LIMIT 21; args=(5,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 2; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 6 LIMIT 21; args=(6,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 3; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 23 LIMIT 21; args=(23,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 18; args=(18,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 7 LIMIT 21; args=(7,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 19; args=(19,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 8 LIMIT 21; args=(8,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 20; args=(20,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 9 LIMIT 21; args=(9,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 21; args=(21,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 14 LIMIT 21; args=(14,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 4; args=(4,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 15 LIMIT 21; args=(15,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 5; args=(5,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 16 LIMIT 21; args=(16,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 6; args=(6,); alias=default
+(0.016) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 20 LIMIT 21; args=(20,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 23; args=(23,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 21 LIMIT 21; args=(21,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 24; args=(24,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 22 LIMIT 21; args=(22,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 25; args=(25,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 17 LIMIT 21; args=(17,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 7; args=(7,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 18 LIMIT 21; args=(18,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 8; args=(8,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 19 LIMIT 21; args=(19,); alias=default
+(0.015) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 9; args=(9,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 12 LIMIT 21; args=(12,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 10; args=(10,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 11 LIMIT 21; args=(11,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 11; args=(11,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 13 LIMIT 21; args=(13,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 12; args=(12,); alias=default
+(0.000) SELECT "base_video"."id", "base_video"."title", "base_video"."video", "base_video"."updated", "base_video"."created" FROM "base_video" WHERE "base_video"."id" = 10 LIMIT 21; args=(10,); alias=default
+(0.000) SELECT "base_image"."id", "base_image"."title", "base_image"."image", "base_image"."updated", "base_image"."created" FROM "base_image" INNER JOIN "base_service_images" ON ("base_image"."id" = "base_service_images"."image_id") WHERE "base_service_images"."service_id" = 22; args=(22,); alias=default
+"GET /services HTTP/1.1" 200 66432
+"GET /static/filesForService/image_10.png HTTP/1.1" 200 1012702
+"GET /static/filesForService/image_9_1.png HTTP/1.1" 200 1522164
+"GET /static/filesForService/image_8.png HTTP/1.1" 200 2704005
+"GET /partnership HTTP/1.1" 200 12435
+"GET /static/scripts/navbar.js HTTP/1.1" 304 0
+"GET /static/scripts/callBackForm.js HTTP/1.1" 304 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2024-06-19 23:02:37.635430' AND "django_session"."session_key" = 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj') LIMIT 21; args=('2024-06-19 23:02:37.635430', 'b4ittah8z4zvzl3hvr9odmdkc7a3ivyj'); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type"; args=(); alias=default
+(0.000) SELECT "base_service"."id", "base_service"."title", "base_service"."hours", "base_service"."minute", "base_service"."cost", "base_service"."description", "base_service"."videos_id", "base_service"."type_id", "base_service"."updated", "base_service"."created" FROM "base_service"; args=(); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "base_type"."id", "base_type"."title", "base_type"."updated", "base_type"."created" FROM "base_type" WHERE "base_type"."id" = 2 LIMIT 21; args=(2,); alias=default
+"GET /order HTTP/1.1" 200 25593

@@ -33,7 +33,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text
     if user_message == "Просмотр неподтвержденных записей":
         # Отправка запроса на Django view
-        response = requests.get('http://127.0.0.1:8000/sendAllNotConfirmedOrdersToTelegram/')
+        response = requests.get('https://lazurenko-hairstyle.ru/sendAllNotConfirmedOrdersToTelegram/')
         if response.status_code != 200:
             await update.message.reply_text("Не удалось вывести записи")
 
@@ -51,7 +51,7 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
 
             if order_id is not None:
                 # Отправляем запрос на подтверждение записи с order_id
-                response = requests.get(f'http://127.0.0.1:8000/confirmOrder/{order_id}')
+                response = requests.get(f'https://lazurenko-hairstyle.ru/confirmOrder/{order_id}')
                 if response.status_code == 200:
                     await query.answer("Запись подтверждена")
                 else:
@@ -71,7 +71,7 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
                     break
 
             if order_id is not None:
-                response = requests.get(f'http://127.0.0.1:8000/cancelOrder/{order_id}')
+                response = requests.get(f'https://lazurenko-hairstyle.ru/cancelOrder/{order_id}')
                 if response.status_code == 200:
                     await query.answer("Запись отменена")
                 else:
